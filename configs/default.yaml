@@ -1,0 +1,40 @@
+# GBM CTMC v0.1 — baseline configuration (no therapy)
+#
+# Evidence level tags (informational):
+#   LIT = literature-supported
+#   ASM = biologically motivated assumption
+#   UNK = uncalibrated / free parameter
+#
+# All rates are in units of day^{-1}.
+
+K: 1000  # UNK — carrying capacity / population scale
+
+basal:
+  lambda_S: 0.02   # LIT (Lan 2017 upper bound: GSC doubling > 24 h)
+  lambda_P: 0.20   # ASM — fast-cycling progenitor
+  mu_S: 0.005      # ASM
+  mu_P: 0.02       # ASM
+  mu_D: 0.05       # ASM
+  mu_Q: 0.003      # ASM
+  c_S: 0.005       # ASM — competition coefficient
+  c_P: 0.01        # ASM
+  c_D: 0.005       # ASM
+  c_Q: 0.001       # ASM
+
+switching:
+  alpha_S: 0.01    # ASM — S asymmetric division → P daughter
+  S_to_P: 0.01     # ASM — S commitment to P
+  P_to_D: 0.05     # ASM — P differentiation
+  sigma: 0.005     # LIT structure (Blath 2023 σ); ASM magnitude
+  rho: 0.02        # LIT structure (Blath 2023 ϱ); ASM magnitude
+
+initial:
+  S: 5
+  P: 50
+  D: 100
+  Q: 2
+
+run:
+  t_end: 180.0     # days
+  seed: 42
+  max_steps: 5000000

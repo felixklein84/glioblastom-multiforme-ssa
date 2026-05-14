@@ -1,0 +1,19 @@
+extends: ../default.yaml
+
+# Stupp RT protocol (LIT schedule; kill probabilities are PLACEHOLDERS / ASM).
+therapy:
+  type: radiotherapy
+  radiotherapy:
+    start_day: 1.0         # first fraction at day 1
+    n_fractions: 30        # LIT — Stupp 2005
+    interval_days: 1.0     # simplified: daily (real protocol: weekdays only)
+    # Per-fraction kill probability — [ASSUMPTION, NOT CLINICALLY CALIBRATED]
+    kappa_S: 0.03          # GSC radio-resistance (qualitative)
+    kappa_P: 0.20          # cycling progenitor — most sensitive
+    kappa_D: 0.10
+    kappa_Q: 0.01          # quiescent — protected
+    # Therapy-induced dormancy fraction of surviving P → Q — [ASSUMPTION]
+    sigma_T_per_fraction: 0.10
+
+run:
+  t_end: 365.0

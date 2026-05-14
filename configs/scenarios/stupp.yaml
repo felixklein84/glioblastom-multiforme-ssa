@@ -1,0 +1,30 @@
+extends: ../default.yaml
+
+# Combined Stupp protocol: concomitant RT + TMZ followed by adjuvant TMZ.
+# Schedule = LIT (Stupp 2005). Kill rates / dormancy rates are PLACEHOLDERS (ASM).
+therapy:
+  type: stupp
+  radiotherapy:
+    start_day: 1.0
+    n_fractions: 30
+    interval_days: 1.0
+    kappa_S: 0.03
+    kappa_P: 0.20
+    kappa_D: 0.10
+    kappa_Q: 0.01
+    sigma_T_per_fraction: 0.10
+  tmz:
+    concomitant_start: 0.0
+    concomitant_end: 42.0
+    adjuvant_start: 49.0
+    adjuvant_cycles: 6
+    cycle_length_days: 28.0
+    treatment_days: 5.0
+    delta_S: 0.03
+    delta_P: 0.20
+    delta_D: 0.05
+    delta_Q: 0.01
+    sigma_T: 0.10
+
+run:
+  t_end: 365.0

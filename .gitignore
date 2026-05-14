@@ -1,0 +1,39 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# Claude / AI tool internals
+.claude/
+settings.local.json
+*.local.json
+
+# Outputs / temporary files
+outputs/
+tmp/
+temp/

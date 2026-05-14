@@ -1,0 +1,5 @@
+extends: ../default.yaml
+therapy:
+  type: none
+run:
+  t_end: 365.0
