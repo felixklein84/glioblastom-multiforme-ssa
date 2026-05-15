@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+message: "If you reference this software, please cite it as below."
+title: "gbm-ctmc: Stochastic glioblastoma therapy simulation"
+abstract: >-
+  A continuous-time Markov chain (CTMC) simulator of glioblastoma cell-state
+  dynamics under fractionated radiotherapy and temozolomide chemotherapy.
+  Implements a four-state hierarchy (glioma stem cell, progenitor,
+  differentiated, quiescent) following Lan 2017 and Blath 2023, with a
+  pluggable Therapy interface and Gillespie SSA. The model is mechanistic and
+  pedagogical; it does not make clinical predictions.
+authors:
+  - family-names: Klein
+    given-names: Felix
+type: software
+version: "0.2.0"
+date-released: "2026-05-15"
+license: MIT
+keywords:
+  - glioblastoma
+  - GBM
+  - continuous-time Markov chain
+  - Gillespie SSA
+  - dormancy
+  - radiotherapy
+  - temozolomide
+  - stochastic simulation
+  - mathematical oncology
+references:
+  - type: article
+    authors:
+      - family-names: Lan
+        given-names: Xiaoyang
+    title: "Fate mapping of human glioblastoma reveals an invariant stem cell hierarchy"
+    journal: Nature
+    volume: 549
+    year: 2017
+    doi: 10.1038/nature23666
+  - type: article
+    authors:
+      - family-names: Blath
+        given-names: Jochen
+      - family-names: Kraut
+        given-names: Anna
+      - family-names: Paul
+        given-names: Tobias
+      - family-names: Tóbiás
+        given-names: András
+    title: "A stochastic population model for the impact of cancer cell dormancy on therapy success"
+    journal: bioRxiv
+    year: 2023
+    doi: 10.1101/2023.12.15.571717
+  - type: article
+    authors:
+      - family-names: Stupp
+        given-names: Roger
+    title: "Radiotherapy plus concomitant and adjuvant temozolomide for glioblastoma"
+    journal: New England Journal of Medicine
+    volume: 352
+    year: 2005
+    doi: 10.1056/NEJMoa043330
